@@ -43,7 +43,7 @@ h3{font-size:0.882rem;margin:clamp(18px,2.4vh,30px) 0 8px;text-transform:upperca
 .ico.sm{width:clamp(36px,4.4vh,52px);height:clamp(36px,4.4vh,52px);font-size:1.176rem;border-radius:9px;border-width:2px}
 .dish{display:flex;align-items:center;gap:10px;background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);box-shadow:var(--sh);padding:10px;min-height:clamp(68px,8.4vh,100px);font:700 1rem var(--font);cursor:pointer;text-align:left;color:var(--ink)}
 .dish.on{outline:var(--bw) solid var(--ink);outline-offset:2px}
-input[type=text],input[type=date],input[type=number],input[type=search]{font:500 1rem var(--font);color:var(--ink);background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);min-height:clamp(52px,6.4vh,76px);padding:0 14px;width:100%;box-shadow:var(--sh);-webkit-appearance:none;appearance:none}
+input[type=text],input[type=date],input[type=number],input[type=search],input[type=tel]{font:500 1rem var(--font);color:var(--ink);background:#fff;border:var(--bw) solid var(--ink);border-radius:var(--r);min-height:clamp(52px,6.4vh,76px);padding:0 14px;width:100%;box-shadow:var(--sh);-webkit-appearance:none;appearance:none}
 input[type=date]{min-width:0}
 .counter{display:flex;align-items:center;gap:12px;justify-content:center}
 .counter .num{font-size:2.588rem;font-weight:700;min-width:70px;text-align:center}
@@ -62,6 +62,7 @@ input[type=date]{min-width:0}
 .banner a{color:var(--ink)}
 .banner-rosso{background:#ffb3c1}.banner-giallo{background:var(--giallo)}
 .empty{text-align:center;padding:30px 10px;color:#555}.empty .big{font-size:2.824rem}
+#tabbar[hidden]{display:none}
 #tabbar{position:fixed;left:0;right:0;bottom:0;margin:0 auto;max-width:480px;display:flex;gap:6px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--bg);border-top:var(--bw) solid var(--ink);z-index:5}
 .tab{flex:1;font:700 0.706rem var(--font);color:var(--ink);background:#fff;border:var(--bw) solid var(--ink);border-radius:12px;min-height:clamp(56px,6.9vh,80px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);padding:0}
 .tab-ico{font-size:1.294rem}

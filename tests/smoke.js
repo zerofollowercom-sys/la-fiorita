@@ -13,7 +13,7 @@
   const saved = () => JSON.parse(localStorage.getItem('lafiorita.v2'));
   try {
     // Codice di accesso: all'avvio senza codice memorizzato si vede la schermata del codice
-    log(!!$('#lock-pin') && document.getElementById('tabbar').hidden && !A.unlocked, 'schermata del codice all\'avvio, tab nascoste');
+    log(!!$('#lock-pin') && getComputedStyle(document.getElementById('tabbar')).display === 'none' && !A.unlocked, 'schermata del codice all\'avvio, tab davvero nascoste');
     type('#lock-pin', '0000'); click('#lock-go'); log(!!$('#lock-pin') && $('#toast').textContent === 'Codice sbagliato', 'codice sbagliato: resta bloccata');
     type('#lock-pin', '2026'); click('#lock-go'); log(!$('#lock-pin') && A.unlocked && !document.getElementById('tabbar').hidden && localStorage.getItem('lafiorita.access') === 'ok' && !!$('#tv-add'), 'codice giusto: entra, ricordato sul dispositivo');
     localStorage.clear(); A.store.load(); A.ui.date = '2026-09-10'; A.ui.meal = 'pranzo'; A.lastToday = L.todayISO(); A.loadForm(); A.render(); // lastToday = oggi vero: così pageshow/visibilitychange non spostano la data durante il test
