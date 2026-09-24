@@ -340,7 +340,7 @@ window.App = (function () {
   const store = window.LaFioritaStore.createStore(storage || noStorage, L);
   const now = new Date();
   const ACCESS_KEY = 'lafiorita.access';
-  const ACCESS_HASH = '7c549383'; // hash del codice di accesso (vedi hashPin); per cambiarlo: node -e "..." e ricostruire
+  const ACCESS_HASH = '7c53f6a6'; // hash del codice di accesso (vedi hashPin); per cambiarlo: node -e "..." e ricostruire
   function hashPin(str) { let h = 5381; for (const ch of String(str)) h = ((h * 33) ^ ch.charCodeAt(0)) >>> 0; return h.toString(16).padStart(8, '0'); }
 
   const App = {

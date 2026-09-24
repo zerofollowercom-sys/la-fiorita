@@ -15,7 +15,7 @@
     // Codice di accesso: all'avvio senza codice memorizzato si vede la schermata del codice
     log(!!$('#lock-pin') && getComputedStyle(document.getElementById('tabbar')).display === 'none' && !A.unlocked, 'schermata del codice all\'avvio, tab davvero nascoste');
     type('#lock-pin', '0000'); click('#lock-go'); log(!!$('#lock-pin') && $('#toast').textContent === 'Codice sbagliato', 'codice sbagliato: resta bloccata');
-    type('#lock-pin', '2026'); click('#lock-go'); log(!$('#lock-pin') && A.unlocked && !document.getElementById('tabbar').hidden && localStorage.getItem('lafiorita.access') === 'ok' && !!$('#tv-add'), 'codice giusto: entra, ricordato sul dispositivo');
+    type('#lock-pin', '1604'); click('#lock-go'); log(!$('#lock-pin') && A.unlocked && !document.getElementById('tabbar').hidden && localStorage.getItem('lafiorita.access') === 'ok' && !!$('#tv-add'), 'codice giusto: entra, ricordato sul dispositivo');
     localStorage.clear(); A.store.load(); A.ui.date = '2026-09-10'; A.ui.meal = 'pranzo'; A.lastToday = L.todayISO(); A.loadForm(); A.render(); // lastToday = oggi vero: così pageshow/visibilitychange non spostano la data durante il test
     log(A.state.dishes.length === 4 && A.state.entries.length === 0, 'stato iniziale: 4 menu, 0 tavoli');
     // Conferma interna all'app (niente window.confirm)
